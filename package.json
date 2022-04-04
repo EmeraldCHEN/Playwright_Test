@@ -1,0 +1,21 @@
+{
+  "name": "playwright_test",
+  "version": "1.0.0",
+  "description": "Playwright Tests",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmeraldCHEN/Playwright_Test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EmeraldCHEN/Playwright_Test/issues"
+  },
+  "homepage": "https://github.com/EmeraldCHEN/Playwright_Test#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.20.2"
+  }
+}
