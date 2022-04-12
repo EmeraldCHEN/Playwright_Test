@@ -8,4 +8,6 @@ Command line
 
 - Disable parallelization: `npx playwright test --workers=1`
 
+- Run in debug mode with Playwright Inspector: `npx playwright test --debug`
+
 Reference: https://playwright.dev/docs/intro
