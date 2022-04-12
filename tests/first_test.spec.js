@@ -1,20 +1,19 @@
-// Playwright Docs - https://playwright.dev/docs/intro
-
 const { test, expect } = require('@playwright/test');
 
 test.describe('Playwright First Test Suite', () => {
 
   test('Flybuys Homepage', async ({ page }) => {
-    await page.goto('/');    
-    await expect(page).toContainUrl('flybuys.co.nz');
+    await page.goto('/');
+    await expect(page).toHaveURL('https://www.flybuys.co.nz/');
     // could be used with ElementHandle
     const title = page.locator('.col-8 > .text-center');
-    await expect(title).toBeVisible({timeout: 12000});
+    await expect(title).toBeVisible();
     await expect(title).toHaveText('Happiness is the freedom to choose.');
-    await page.click('.primary-nav__list > [data-testid="primary-nav-store"] > a');
-    await expect(page).toContainUrl('store.flybuys.co.nz'); 
-    const wishlistIcon = page.locator('.fal .fa-heart');
-    await expect(wishlistIcon).toBeVisible; 
+
+    await page.click('.primary-nav__list > [data-testid="primary-nav-store"]'); 
+    await expect(page).toHaveURL('https://store.flybuys.co.nz/');    
+    const wishlistIcon = page.locator('.wishlink-wrapper > .action');
+    await expect(wishlistIcon).toBeVisible({timeout: 8000});     
   });
 
   test('Flybuys Earn Page', async ({ page }) => {
